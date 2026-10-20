@@ -4,10 +4,10 @@
     {
       "name": "School App Manager (тестова версія)",
       "packageName": "org.nbschool.appmanager",
-      "versionCode": 4,
-      "versionName": "0.2.1",
-      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/School-App-Manager-0.2.1-debug.apk",
-      "sha256": "e6f40e7029e756b1f97d0cd35d873a31a145dbd4af4e91bf9941a7cebc9aeb3f",
+      "versionCode": 5,
+      "versionName": "0.2.2",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/School-App-Manager-0.2.2-debug.apk",
+      "sha256": "ae813274def2e3a250cb31dfdb93005c618f3776d4e02c536c3f813dcf85a3ed",
       "signerSha256": "ae36dfbc8e8695fa3a76629802d3353e8122d5570295c85bd688877c4479598c"
     }
   ]

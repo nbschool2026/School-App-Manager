@@ -18,13 +18,13 @@ Kotlin, Android 9+ (API 28), ARM64, direct distribution to school tablets.
 ## On-tablet update test
 
 1. Push the commits to GitHub.
-2. Manually install `app/apk/School-App-Manager-0.2.0-debug.apk` over the existing manager.
+2. Open the installed manager version 0.2.1. If needed, manually install `app/apk/School-App-Manager-0.2.1-debug.apk` first.
 3. Open the manager and check the default online catalog.
-4. The catalog offers version 0.2.1 (versionCode 4): expect one update.
+4. The catalog offers version 0.2.2 (versionCode 5): expect one update.
 5. Download; wait for the SHA-256/signature checks; tap Install.
 6. If needed, allow installations from School App Manager in Android Settings, return and tap Install again.
 7. Confirm in the system installer. A self-update can close the manager; reopen it.
-8. Rescan: expect one app, zero updates, header version 0.2.1.
+8. Rescan: expect one app, zero updates, header version 0.2.2.
 
 Device installation and network behavior still require this manual test. Desktop tests cover version comparison, a real APK's SHA-256/signature, wrong hashes, wrong signer and tampered APK rejection.
 
