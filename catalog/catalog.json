@@ -18,6 +18,24 @@
       "apkUrl": "https://raw.githubusercontent.com/kosachevlad/windows-learning-desktop-mvp/50e056498383ab1660254a26e3c9ad87be7e0d70/app/apk/stage106.apk",
       "sha256": "db892fe83de32d25f145ffcacc533d363834ecfb6ff1914171d12ca2b7533fd0",
       "signerSha256": "e73c46bacc29538c465f2c5b96926d6fc4545db0dfa784e86ca1552c2303b832"
+    },
+    {
+      "name": "BlockDrop (Тетріс)",
+      "packageName": "com.blockdrop.game",
+      "versionCode": 662,
+      "versionName": "1.0.69",
+      "apkUrl": "https://f-droid.org/repo/com.blockdrop.game_662.apk",
+      "sha256": "90c5b66b3092bd9641f3265e42cb3957f25693900555dda64efc7e1c04a5e820",
+      "signerSha256": "011ee1a6e4e5ecd675f67fbf3d78ad82614a7a7a3f24ed71cc9c417154a0f0fd"
+    },
+    {
+      "name": "Шахи",
+      "packageName": "jwtc.android.chess",
+      "versionCode": 298,
+      "versionName": "10.6.0",
+      "apkUrl": "https://f-droid.org/repo/jwtc.android.chess_298.apk",
+      "sha256": "3245b9ec35f6c1df771c418ac91ec792b5e056fb37e1d391e607b614f1a283b4",
+      "signerSha256": "e0c0cbdeebe74a7bb65a409c509d248b875b84cad3bd59c1debf013f30037fba"
     }
   ]
 }
