@@ -1,2 +1,34 @@
-# School-App-Manager
-Android app manager for school tablets: trusted APK catalog and version checks (Kotlin, Android 9+).
+# School App Manager — етап 1
+
+Kotlin, Android 9+ (API 28), працює на ARM64 без нативних бібліотек.
+
+Реалізовано: введення HTTPS-адреси JSON, завантаження у фоновому потоці, обмеження розміру й часу, перевірка структури, зіставлення packageName/longVersionCode, статуси та помилки українською. Старіша версія потребує оновлення; рівна/новіша пропускається.
+
+На цьому етапі APK не завантажуються і не встановлюються. Поля хешів перевіряються лише за форматом. Перевірка самих APK та системне встановлення — наступні етапи.
+
+## Збірка
+
+Потрібні JDK 17, Android SDK Platform 35 та Gradle 8.9. Gradle wrapper поки не включено. У встановленому Gradle виконайте `gradle wrapper --gradle-version 8.9`, потім `./gradlew testDebugUnitTest assembleDebug` (Windows: `gradlew.bat testDebugUnitTest assembleDebug`). APK: `app/build/outputs/apk/debug/app-debug.apk`. Це тестова збірка; для фінальної потрібен постійний ключ підпису.
+
+## Каталог
+
+`catalog/catalog.json` навмисно порожній: перевірених APK, їхніх versionCode і сертифікатів ще не отримано. Не підставляти припущені значення. Для кожного застосунку потрібні поля:
+
+- `name`, `packageName`, `versionName`, додатний числовий `versionCode`;
+- `apkUrl` — прямий HTTPS URL одного APK (не XAPK/APKM);
+- `sha256` — 64 hex символи SHA-256 файлу;
+- `signerSha256` — 64 hex символи SHA-256 DER сертифіката підписувача.
+
+Кореневі поля: `schemaVersion: 1`, `apps: [...]`. URL каталогу вводиться на планшеті. Сервер повинен відповідати HTTP 200 без перенаправлень. Для перевірки підключення можна опублікувати цей порожній каталог через GitHub raw URL.
+
+YouTube 21.23.485, Gmail 2019.06.09.254811277.release та windows-learning-desktop очікують перевірки реальних Android APK, сумісності Android 9 ARM64 і метаданих. Назва desktop не доводить наявність Android-збірки.
+
+## Далі
+
+1. Репозиторій nbschool2026/School-App-Manager створено, каркас завантажено. Збірка й тести ще не запускалися.
+2. Налаштувати збірку та перевірити APK на планшеті.
+3. Заповнити каталог перевіреними APK.
+4. Реалізувати завантаження, SHA-256, криптографічну перевірку підпису, packageName/versionCode і сумісності.
+5. Додати системне встановлення з підтвердженням, повторне сканування та перевірку результату.
+
+Менеджер призначений для прямого розповсюдження школою. QUERY_ALL_PACKAGES потрібен для динамічного каталогу на Android 11+; на Android 9 інвентаризація доступна без цього дозволу.
