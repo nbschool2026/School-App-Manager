@@ -1,34 +1,45 @@
-# School App Manager — етап 1
+# School App Manager
 
-Kotlin, Android 9+ (API 28), працює на ARM64 без нативних бібліотек.
+Kotlin, Android 9+ (API 28), ARM64, direct distribution to school tablets.
 
-Реалізовано: введення HTTPS-адреси JSON, завантаження у фоновому потоці, обмеження розміру й часу, перевірка структури, зіставлення packageName/longVersionCode, статуси та помилки українською. Старіша версія потребує оновлення; рівна/новіша пропускається.
+## Implemented
 
-На цьому етапі APK не завантажуються і не встановлюються. Поля хешів перевіряються лише за форматом. Перевірка самих APK та системне встановлення — наступні етапи.
+- HTTPS JSON catalog; compare installed packageName/longVersionCode.
+- Skip equal/newer versions; offer downloads only for missing/older apps.
+- Download progress and cancellation; 512 MiB limit, 5 minute deadline, 15 second socket timeouts.
+- Require HTTP 200 and direct HTTPS APK URLs (redirects rejected).
+- Verify SHA-256 and cryptographic APK signatures using Google apksig on the tablet's API level.
+- Match the catalog's signer certificate, packageName and versionCode; check minSdk and native ABI compatibility.
+- Require matching installed signer for updates. Key rotation and multiple signers fail closed in this version.
+- Recheck the APK before installation. Share only this private APK through a read-only provider with temporary URI permission.
+- Open Android's installer for user confirmation. Unknown-source permission is requested through Android Settings after an explanation.
+- Check the installed version when the installer returns; report cancellation/failure and allow rescanning.
 
-## Збірка
+## On-tablet update test
 
-Потрібні JDK 17, Android SDK Platform 35 та Gradle 8.9. Gradle wrapper поки не включено. У встановленому Gradle виконайте `gradle wrapper --gradle-version 8.9`, потім `./gradlew testDebugUnitTest assembleDebug` (Windows: `gradlew.bat testDebugUnitTest assembleDebug`). APK: `app/build/outputs/apk/debug/app-debug.apk`. Це тестова збірка; для фінальної потрібен постійний ключ підпису.
+1. Push the commits to GitHub.
+2. Manually install `app/apk/School-App-Manager-0.2.0-debug.apk` over the existing manager.
+3. Open the manager and check the default online catalog.
+4. The catalog offers version 0.2.1 (versionCode 4): expect one update.
+5. Download; wait for the SHA-256/signature checks; tap Install.
+6. If needed, allow installations from School App Manager in Android Settings, return and tap Install again.
+7. Confirm in the system installer. A self-update can close the manager; reopen it.
+8. Rescan: expect one app, zero updates, header version 0.2.1.
 
-## Каталог
+Device installation and network behavior still require this manual test. Desktop tests cover version comparison, a real APK's SHA-256/signature, wrong hashes, wrong signer and tampered APK rejection.
 
-`catalog/catalog.json` навмисно порожній: перевірених APK, їхніх versionCode і сертифікатів ще не отримано. Не підставляти припущені значення. Для кожного застосунку потрібні поля:
+## Build
 
-- `name`, `packageName`, `versionName`, додатний числовий `versionCode`;
-- `apkUrl` — прямий HTTPS URL одного APK (не XAPK/APKM);
-- `sha256` — 64 hex символи SHA-256 файлу;
-- `signerSha256` — 64 hex символи SHA-256 DER сертифіката підписувача.
+JDK 17, Gradle 8.9, Android SDK Platform 35 and Build Tools 34.0.0. Use `gradle wrapper --gradle-version 8.9` if no wrapper is present, then `gradlew.bat testDebugUnitTest assembleDebug lintDebug`. Output: `app/build/outputs/apk/debug/app-debug.apk`.
 
-Кореневі поля: `schemaVersion: 1`, `apps: [...]`. URL каталогу вводиться на планшеті. Сервер повинен відповідати HTTP 200 без перенаправлень. Для перевірки підключення можна опублікувати цей порожній каталог через GitHub raw URL.
+Use the same debug keystore as earlier builds for test updates. Never commit keystores. Final distribution needs a permanent release signing key. The binary APKs in `app/apk` are test builds.
 
-YouTube 21.23.485, Gmail 2019.06.09.254811277.release та windows-learning-desktop очікують перевірки реальних Android APK, сумісності Android 9 ARM64 і метаданих. Назва desktop не доводить наявність Android-збірки.
+## Catalog
 
-## Далі
+Root: `schemaVersion: 1`, `apps: [...]`. Each entry requires `name`, `packageName`, numeric positive `versionCode`, `versionName`, direct HTTPS `apkUrl`, lowercase 64-character `sha256` and `signerSha256` (SHA-256 of DER signing certificate). Catalog updates must be reviewed by its owner; do not substitute guessed APK metadata.
 
-1. Репозиторій nbschool2026/School-App-Manager створено, каркас завантажено. Збірка й тести ще не запускалися.
-2. Налаштувати збірку та перевірити APK на планшеті.
-3. Заповнити каталог перевіреними APK.
-4. Реалізувати завантаження, SHA-256, криптографічну перевірку підпису, packageName/versionCode і сумісності.
-5. Додати системне встановлення з підтвердженням, повторне сканування та перевірку результату.
+The catalog currently includes only School App Manager as an update test. YouTube, Gmail and windows-learning-desktop still need actual Android APKs and verification of Android 9 compatibility, package/version metadata and signing certificates.
 
-Менеджер призначений для прямого розповсюдження школою. QUERY_ALL_PACKAGES потрібен для динамічного каталогу на Android 11+; на Android 9 інвентаризація доступна без цього дозволу.
+Only single APK files are supported, not XAPK/APKM or split APK sets. No silent installation, automatic uninstall or downgrade. Downloads are tied to the open activity; process termination cancels the operation and requires retrying.
+
+`QUERY_ALL_PACKAGES` supports inventory from a dynamic catalog on Android 11+; this is a dedicated school manager distributed directly, not a Play Store submission.

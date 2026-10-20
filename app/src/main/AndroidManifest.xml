@@ -1,9 +1,11 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- Dedicated app inventory manager, distributed directly to school tablets. -->
-    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- Dedicated sideloaded school inventory manager: packages come from a dynamic online catalog. -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission" />
     <application android:label="School App Manager" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:allowBackup="false" android:usesCleartextTraffic="false" android:supportsRtl="true">
-        <activity android:name=".MainActivity" android:exported="true">
+        <provider android:name=".ApkProvider" android:authorities="org.nbschool.appmanager.apk" android:exported="false" android:grantUriPermissions="true" />
+        <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize">
             <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
         </activity>
     </application>

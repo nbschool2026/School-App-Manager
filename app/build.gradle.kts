@@ -6,10 +6,16 @@ android {
         applicationId = "org.nbschool.appmanager"
         minSdk = 28
         targetSdk = 35
-        versionCode = 2
-        versionName = "0.1.1"
+        versionCode = 3
+        versionName = "0.2.0"
     }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
 }
-dependencies { testImplementation("junit:junit:4.13.2") }
+dependencies {
+    implementation("com.android.tools.build:apksig:8.7.3")
+    testImplementation("junit:junit:4.13.2")
+}
+tasks.withType<Test>().configureEach {
+    systemProperty("apkFixture", rootProject.file("app/apk/School-App-Manager-0.1.1-debug.apk").absolutePath)
+}
