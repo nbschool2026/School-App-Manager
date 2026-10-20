@@ -9,6 +9,15 @@
       "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/School-App-Manager-0.2.2-debug.apk",
       "sha256": "ae813274def2e3a250cb31dfdb93005c618f3776d4e02c536c3f813dcf85a3ed",
       "signerSha256": "ae36dfbc8e8695fa3a76629802d3353e8122d5570295c85bd688877c4479598c"
+    },
+    {
+      "name": "Windows Learning Desktop",
+      "packageName": "ua.school.windowsdesktop",
+      "versionCode": 10,
+      "versionName": "0.1.8",
+      "apkUrl": "https://raw.githubusercontent.com/kosachevlad/windows-learning-desktop-mvp/50e056498383ab1660254a26e3c9ad87be7e0d70/app/apk/stage106.apk",
+      "sha256": "db892fe83de32d25f145ffcacc533d363834ecfb6ff1914171d12ca2b7533fd0",
+      "signerSha256": "e73c46bacc29538c465f2c5b96926d6fc4545db0dfa784e86ca1552c2303b832"
     }
   ]
 }

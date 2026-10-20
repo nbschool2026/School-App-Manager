@@ -16,7 +16,7 @@
 | Шахи (названі Chess for Android у відповіді) | 10.6.0 (298); ідентичність і версію звірити з APK |
 | YouTube | 21.23.485 |
 | Gmail | 2019.06.09.254811277.release |
-| windows-learning-desktop | Власний застосунок користувача; номер версії не наведено |
+| windows-learning-desktop | Windows Learning Desktop 0.1.8, versionCode 10; зчитано з наданого stage106.apk 20.10.2026 |
 
 У повідомленні користувача про успішну перевірку Тетріса відкрито посилання:
 https://f-droid.org/repo/com.blockdrop.game_662.apk
@@ -31,3 +31,14 @@ https://f-droid.org/repo/jwtc.android.chess_298.apk
 Планшети: приблизно 14 пристроїв, Android 9, ARM64; Google Play Services 17.7.85 (100400-253824076), Play Store відсутній, адміністрування обмежене. Це історичні дані користувача з розмови.
 
 School App Manager є додатковим тестовим записом у catalog.json і не замінює цей список. Google Drive враховується окремо як системний застосунок; без установленої версії та перевіреного APK його оновлення не планувати.
+
+## Windows Learning Desktop: перевірений файл
+
+Користувач надав https://github.com/kosachevlad/windows-learning-desktop-mvp/blob/feature/windows-learning-desktop-mvp/app/apk/stage106.apk як останню версію свого застосунку.
+
+Зафіксований коміт: `50e056498383ab1660254a26e3c9ad87be7e0d70`.
+Фактичний packageName: `ua.school.windowsdesktop`, versionName: `0.1.8`, versionCode: `10`, minSdk: `26`, targetSdk: `36`.
+ABI: arm64-v8a, armeabi-v7a, x86, x86_64.
+SHA-256 APK: `db892fe83de32d25f145ffcacc533d363834ecfb6ff1914171d12ca2b7533fd0`.
+SHA-256 сертифіката: `e73c46bacc29538c465f2c5b96926d6fc4545db0dfa784e86ca1552c2303b832`.
+Підпис перевірено apksigner для API 28. Це debug APK; фактичний запуск цієї збірки на планшеті ще потребує перевірки користувачем. Збережено запис у catalog.json з незмінним URL на коміт.
