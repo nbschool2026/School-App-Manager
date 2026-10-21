@@ -1,39 +1,29 @@
-# Стан додавання всього списку — 20.10.2026
+# Стан каталогу — 21.10.2026
 
-## У робочому catalog.json: 5 записів (оновлено 21.10.2026)
+У catalog.json підготовлено 10 записів. Щоб вони стали доступні планшетам, потрібно надіслати локальний коміт на GitHub.
 
-- School App Manager 0.2.2 — тест оновлення менеджера.
-- Google Docs 1.19.372.08.40, versionCode 193720840 — користувач надав APK 21.10.2026; підпис для Android 9, minSdk 21 і ARM64 перевірено. Файл додано в app/apk/Google-Docs-1.19.372.08.40.apk (47224208 байт). SHA-256: e5c3978b49919022c0139936df72e2fd497b64202d61dbe06add77508ad9cf79. Google signer: 3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a.
-- Windows Learning Desktop 0.1.8 — користувач підтвердив встановлення через менеджер.
-- BlockDrop 1.0.69, versionCode 662 — завантажено з F-Droid; SHA-256, криптографічний підпис для Android 9, minSdk 24 та ARM64 перевірено.
-- Шахи 10.6.0, versionCode 298, packageName jwtc.android.chess — завантажено з F-Droid; SHA-256, підпис для Android 9, minSdk 24 та ARM64 перевірено.
+| Застосунок | Версія | Розміщення |
+|---|---|---|
+| School App Manager | 0.2.3 (6) | app/apk у репозиторії |
+| Windows Learning Desktop | 0.1.8 (10) | Зафіксований коміт репозиторію користувача |
+| Google Docs | 1.19.372.08.40 (193720840) | app/apk у репозиторії |
+| BlockDrop | 1.0.69 (662) | F-Droid |
+| Шахи | 10.6.0 (298) | F-Droid |
+| Google Sheets | 1.25.501.00.90 (220666337) | GitHub Release school-apks |
+| Google Slides | 1.25.391.01.90 (220658844) | GitHub Release school-apks |
+| Google Meet | 2024.06.02.643059695.Release (4215163) | GitHub Release school-apks |
+| Viber | 22.4.3.0 (651273) | GitHub Release school-apks |
+| YouTube | 21.23.485 (1561176952) | GitHub Release school-apks |
 
-## APK отримано, але в робочий каталог ще не додано
+Release опубліковано: https://github.com/nbschool2026/School-App-Manager/releases/tag/school-apks
 
-- Google Sheets 1.25.501.00.90, versionCode 220666337 — 107306389 байт, minSdk 26, ARM64, Google signer SHA-256 3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a. SHA-256 APK aabfa3af10eee376934db753486631d3ac4191127d0b6153b0b1d9d68ccbcd7e.
-- Google Slides 1.25.391.01.90, versionCode 220658844 — 155808054 байт, minSdk 26, ARM64, той самий Google signer. SHA-256 APK 897d9b2a323bf688d185d174516310cde77d02248b201d2444af62b95dd46d01.
+Для п'яти файлів Release використано надані користувачем оригінальні APK. Зчитано фактичні packageName/versionCode, minSdk, ARM64; підписи перевірено apksigner для API 28. SHA-256 файлів повторно зіставлено з полем digest опублікованих GitHub assets — збігаються. Точні значення хешів і сертифікатів збережено в catalog.json.
 
-Обидва підписи успішно перевірено apksigner для API 28. Файли збережено локально поза Git у папці outputs/Verified-APKs поруч із каталогом проєкту. Поточне джерело видає тимчасові URL, які не можна зберігати як постійні посилання каталогу. Кожний APK перевищує ліміт звичайного GitHub-файлу 100 MiB. Потрібне постійне сховище (наприклад GitHub Release). Поточний менеджер 0.2.2 відхиляє перенаправлення, тому перед використанням Release URLs потрібно додати обмежену підтримку HTTPS redirects і зібрати менеджер.
+Менеджер 0.2.3 підтримує до п'яти HTTPS-перенаправлень APK. HTTP, URL з обліковими даними та відсутній Location відхиляються. SHA-256 і криптографічна перевірка підпису залишаються обов'язковими. Онлайн JSON-каталог усе ще має повертати HTTP 200 без перенаправлень.
 
-Джерела отриманих файлів:
-- https://apk.cafe/download?file_id=3390769/google-sheets
-- https://apk.cafe/download?file_id=3326890/google-slides
+Спочатку встановити менеджер 0.2.3 поверх попередньої версії. Версія 0.2.2 не підтримує перенаправлення GitHub Release. Новий APK міститься в app/apk/School-App-Manager-0.2.3-debug.apk; підпис той самий, що й раніше. Збірка, 15 unit-тестів і lint завершилися успішно (lint має попередження про локалізацію, іконку, backup та версії залежностей). Встановлення цих п'яти сторонніх APK через новий завантажувач ще перевіряється на реальному планшеті; сумісність minSdk/ABI не доводить працездатність мережевих сервісів.
 
-Зіставлені сторінки потрібних версій:
-- https://www.apkmirror.com/apk/google-inc/sheets/google-sheets-1-25-501-00-release/google-sheets-1-25-501-00-90-android-apk-download/
-- https://www.apkmirror.com/apk/google-inc/slides/google-slides-1-25-391-01-release/google-slides-1-25-391-01-90-2-android-apk-download/
+## Ще не додано
 
-## Файли точних версій ще не отримано
-
-- Google Meet 2024.06.02.643059695.Release — знайдена потрібна версія; доступний на альтернативному джерелі файл 2024.06.02.639595590.Release не підставлявся замість неї.
-  https://www.apkmirror.com/apk/google-inc/hangouts-meet/
-- Viber 22.4.3.0 — знайдена потрібна ARM64 версія; альтернативне джерело не відповіло в межах таймауту.
-  https://www.apkmirror.com/apk/viber-media-s-a-r-l/viber/viber-22-4-3-0-release/rakuten-viber-messenger-22-4-3-0-4-2-android-apk-download/
-- YouTube 21.23.485 — знайдено окремий universal APK для Android 9; у доступному альтернативному джерелі є 21.23.483, заміну не зроблено.
-  https://www.apkmirror.com/apk/google-inc/youtube/youtube-21-23-485-release/youtube-21-23-485-android-apk-download/
-- Gmail 2019.06.09.254811277.release — знайдена потрібна версія, але файл не отримано. Існують різні підписи, тому сертифікат потрібно звірити з установленим на планшеті застосунком.
-  https://www.apkmirror.com/apk/google-inc/gmail/gmail-2019-06-09-254811277-release-release/gmail-2019-06-09-254811277-release-2-android-apk-download/
-
-Запити до APKMirror із командного середовища повернули HTTP 403. У звичайному браузері сторінка відкрилася, проте завантаження не завершилося за час доступного очікування. Наявність сторінки не підтверджує отримання/перевірку APK. Для продовження можна використати оригінальні APK, які вже працювали на планшеті.
-
-Google Drive — окремий системний застосунок. Потрібні встановлені versionCode та сертифікат; не обирати довільну версію для оновлення.
+- Gmail 2019.06.09.254811277.release: потрібен APK. Існують різні підписи — перевірити наданий файл.
+- Google Drive: системний застосунок. Версію для оновлення не обираємо без перевірки встановленої версії та сертифіката.

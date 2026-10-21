@@ -4,12 +4,10 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import java.io.File
-import java.net.URL
 import java.security.MessageDigest
 import java.util.concurrent.CancellationException
 import java.util.concurrent.atomic.AtomicBoolean
 import java.util.zip.ZipFile
-import javax.net.ssl.HttpsURLConnection
 
 object ApkTransfer {
     const val MAX_BYTES = 512L * 1024 * 1024
@@ -17,13 +15,12 @@ object ApkTransfer {
         val partial = File(context.cacheDir, "download.part")
         val target = File(context.cacheDir, "verified.apk")
         target.delete()
-        val url = URL(app.apkUrl)
-        require(url.protocol == "https" && url.userInfo == null) { "Потрібна HTTPS-адреса APK" }
-        val connection = url.openConnection() as HttpsURLConnection
-        connection.connectTimeout = 15000; connection.readTimeout = 15000; connection.instanceFollowRedirects = false
         val deadline = android.os.SystemClock.elapsedRealtime() + 5 * 60 * 1000
+        val connection = HttpsDownloads.open(app.apkUrl) {
+            if (cancel.get() || Thread.currentThread().isInterrupted) throw CancellationException("Завантаження скасовано")
+            require(android.os.SystemClock.elapsedRealtime() < deadline) { "Час завантаження вичерпано" }
+        }
         try {
-            require(connection.responseCode == 200) { "APK: HTTP ${connection.responseCode}; потрібне пряме посилання без перенаправлень" }
             val length = connection.contentLengthLong
             require(length <= MAX_BYTES) { "APK перевищує 512 МБ" }
             val digest = MessageDigest.getInstance("SHA-256")

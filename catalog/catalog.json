@@ -4,10 +4,10 @@
     {
       "name": "School App Manager (тестова версія)",
       "packageName": "org.nbschool.appmanager",
-      "versionCode": 5,
-      "versionName": "0.2.2",
-      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/School-App-Manager-0.2.2-debug.apk",
-      "sha256": "ae813274def2e3a250cb31dfdb93005c618f3776d4e02c536c3f813dcf85a3ed",
+      "versionCode": 6,
+      "versionName": "0.2.3",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/School-App-Manager-0.2.3-debug.apk",
+      "sha256": "5c2071f75d1c216f728c8834101179d288ffa430d5f215ef8edf617351af4fa2",
       "signerSha256": "ae36dfbc8e8695fa3a76629802d3353e8122d5570295c85bd688877c4479598c"
     },
     {
@@ -44,6 +44,51 @@
       "versionName": "1.19.372.08.40",
       "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Google-Docs-1.19.372.08.40.apk",
       "sha256": "e5c3978b49919022c0139936df72e2fd497b64202d61dbe06add77508ad9cf79",
+      "signerSha256": "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
+    },
+    {
+      "name": "Google Sheets",
+      "packageName": "com.google.android.apps.docs.editors.sheets",
+      "versionCode": 220666337,
+      "versionName": "1.25.501.00.90",
+      "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/Google-Sheets-1.25.501.00.90.apk",
+      "sha256": "aabfa3af10eee376934db753486631d3ac4191127d0b6153b0b1d9d68ccbcd7e",
+      "signerSha256": "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
+    },
+    {
+      "name": "Google Slides",
+      "packageName": "com.google.android.apps.docs.editors.slides",
+      "versionCode": 220658844,
+      "versionName": "1.25.391.01.90",
+      "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/Google-Slides-1.25.391.01.90.apk",
+      "sha256": "897d9b2a323bf688d185d174516310cde77d02248b201d2444af62b95dd46d01",
+      "signerSha256": "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
+    },
+    {
+      "name": "Google Meet",
+      "packageName": "com.google.android.apps.meetings",
+      "versionCode": 4215163,
+      "versionName": "2024.06.02.643059695.Release",
+      "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/Google-Meet-2024.06.02.643059695.apk",
+      "sha256": "bef2bfb00e275cf1be524349c1e4918982a678e7e47c3fab66c006dc84363444",
+      "signerSha256": "c02724f3a37cced2d34d87b6536d8db843c6182970fe0c5ed8c8911f150efda9"
+    },
+    {
+      "name": "Viber",
+      "packageName": "com.viber.voip",
+      "versionCode": 651273,
+      "versionName": "22.4.3.0",
+      "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/Viber-22.4.3.0.apk",
+      "sha256": "97c1742fc6287b1afaacb6307c05d1b544b22b7b6585fac274662e4a701759b1",
+      "signerSha256": "6e9857865c0d4568e02ef76dc838ed282a3d24b12c7027b3926190d99b42fe09"
+    },
+    {
+      "name": "YouTube",
+      "packageName": "com.google.android.youtube",
+      "versionCode": 1561176952,
+      "versionName": "21.23.485",
+      "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/YouTube-21.23.485.apk",
+      "sha256": "aeb19a76bdccf72f6027efaf4b4eee3cc10286bf4ac42b699eaa6bb99d6d0078",
       "signerSha256": "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
     }
   ]

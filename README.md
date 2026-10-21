@@ -7,7 +7,7 @@ Kotlin, Android 9+ (API 28), ARM64, direct distribution to school tablets.
 - HTTPS JSON catalog; compare installed packageName/longVersionCode.
 - Skip equal/newer versions; offer downloads only for missing/older apps.
 - Download progress and cancellation; 512 MiB limit, 5 minute deadline, 15 second socket timeouts.
-- Require HTTP 200 and direct HTTPS APK URLs (redirects rejected).
+- Require final HTTP 200; follow at most five HTTPS APK redirects, rejecting HTTP downgrades and credentials in URLs. Catalog JSON still requires direct HTTPS with no redirects.
 - Verify SHA-256 and cryptographic APK signatures using Google apksig on the tablet's API level.
 - Match the catalog's signer certificate, packageName and versionCode; check minSdk and native ABI compatibility.
 - Require matching installed signer for updates. Key rotation and multiple signers fail closed in this version.
@@ -18,13 +18,13 @@ Kotlin, Android 9+ (API 28), ARM64, direct distribution to school tablets.
 ## On-tablet update test
 
 1. Push the commits to GitHub.
-2. Open the installed manager version 0.2.1. If needed, manually install `app/apk/School-App-Manager-0.2.1-debug.apk` first.
+2. Open the installed manager version 0.2.2. If needed, manually install `app/apk/School-App-Manager-0.2.2-debug.apk` first.
 3. Open the manager and check the default online catalog.
-4. The catalog offers version 0.2.2 (versionCode 5): expect one update.
+4. The catalog offers version 0.2.3 (versionCode 6): expect one update.
 5. Download; wait for the SHA-256/signature checks; tap Install.
 6. If needed, allow installations from School App Manager in Android Settings, return and tap Install again.
 7. Confirm in the system installer. A self-update can close the manager; reopen it.
-8. Rescan: expect one app, zero updates, header version 0.2.2.
+8. Rescan: expect 10 catalog apps; the manager is current and its header is version 0.2.3. Other missing/older apps can still require installation.
 
 Device installation and network behavior still require this manual test. Desktop tests cover version comparison, a real APK's SHA-256/signature, wrong hashes, wrong signer and tampered APK rejection.
 
@@ -38,7 +38,7 @@ Use the same debug keystore as earlier builds for test updates. Never commit key
 
 Root: `schemaVersion: 1`, `apps: [...]`. Each entry requires `name`, `packageName`, numeric positive `versionCode`, `versionName`, direct HTTPS `apkUrl`, lowercase 64-character `sha256` and `signerSha256` (SHA-256 of DER signing certificate). Catalog updates must be reviewed by its owner; do not substitute guessed APK metadata.
 
-The catalog includes School App Manager, Windows Learning Desktop 0.1.8, Google Docs 1.19.372.08.40, BlockDrop 1.0.69 and Chess 10.6.0. The user confirmed Windows Learning Desktop installation through the manager. The recovered complete school app list is in `catalog/APP-LIST.md`; per-app import progress and remaining blockers are in `catalog/IMPORT-STATUS.md`. Apps whose APKs or permanent download URLs are not verified are not included in the live catalog.
+The catalog includes 10 entries: School App Manager 0.2.3, Windows Learning Desktop, Google Docs, Sheets, Slides, Meet, Viber, YouTube, BlockDrop and Chess. The five new APKs are published in the school-apks GitHub Release with hashes verified against the uploaded assets. The user confirmed Windows Learning Desktop installation through the manager. The recovered complete school app list is in `catalog/APP-LIST.md`; per-app import progress and remaining blockers are in `catalog/IMPORT-STATUS.md`. Apps whose APKs or permanent download URLs are not verified are not included in the live catalog.
 
 Only single APK files are supported, not XAPK/APKM or split APK sets. No silent installation, automatic uninstall or downgrade. Downloads are tied to the open activity; process termination cancels the operation and requires retrying.
 
