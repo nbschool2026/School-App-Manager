@@ -38,7 +38,7 @@ Use the same debug keystore as earlier builds for test updates. Never commit key
 
 Root: `schemaVersion: 1`, `apps: [...]`. Each entry requires `name`, `packageName`, numeric positive `versionCode`, `versionName`, direct HTTPS `apkUrl`, lowercase 64-character `sha256` and `signerSha256` (SHA-256 of DER signing certificate). Catalog updates must be reviewed by its owner; do not substitute guessed APK metadata.
 
-The catalog includes School App Manager, Windows Learning Desktop 0.1.8, BlockDrop 1.0.69 and Chess 10.6.0. The user confirmed Windows Learning Desktop installation through the manager. The recovered complete school app list is in `catalog/APP-LIST.md`; per-app import progress and remaining blockers are in `catalog/IMPORT-STATUS.md`. Apps whose APKs or permanent download URLs are not verified are not included in the live catalog.
+The catalog includes School App Manager, Windows Learning Desktop 0.1.8, Google Docs 1.19.372.08.40, BlockDrop 1.0.69 and Chess 10.6.0. The user confirmed Windows Learning Desktop installation through the manager. The recovered complete school app list is in `catalog/APP-LIST.md`; per-app import progress and remaining blockers are in `catalog/IMPORT-STATUS.md`. Apps whose APKs or permanent download URLs are not verified are not included in the live catalog.
 
 Only single APK files are supported, not XAPK/APKM or split APK sets. No silent installation, automatic uninstall or downgrade. Downloads are tied to the open activity; process termination cancels the operation and requires retrying.
 

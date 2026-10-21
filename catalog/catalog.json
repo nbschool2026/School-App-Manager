@@ -36,6 +36,15 @@
       "apkUrl": "https://f-droid.org/repo/jwtc.android.chess_298.apk",
       "sha256": "3245b9ec35f6c1df771c418ac91ec792b5e056fb37e1d391e607b614f1a283b4",
       "signerSha256": "e0c0cbdeebe74a7bb65a409c509d248b875b84cad3bd59c1debf013f30037fba"
+    },
+    {
+      "name": "Google Docs",
+      "packageName": "com.google.android.apps.docs.editors.docs",
+      "versionCode": 193720840,
+      "versionName": "1.19.372.08.40",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Google-Docs-1.19.372.08.40.apk",
+      "sha256": "e5c3978b49919022c0139936df72e2fd497b64202d61dbe06add77508ad9cf79",
+      "signerSha256": "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
     }
   ]
 }

@@ -1,8 +1,9 @@
 # Стан додавання всього списку — 20.10.2026
 
-## У робочому catalog.json: 4 записи
+## У робочому catalog.json: 5 записів (оновлено 21.10.2026)
 
 - School App Manager 0.2.2 — тест оновлення менеджера.
+- Google Docs 1.19.372.08.40, versionCode 193720840 — користувач надав APK 21.10.2026; підпис для Android 9, minSdk 21 і ARM64 перевірено. Файл додано в app/apk/Google-Docs-1.19.372.08.40.apk (47224208 байт). SHA-256: e5c3978b49919022c0139936df72e2fd497b64202d61dbe06add77508ad9cf79. Google signer: 3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a.
 - Windows Learning Desktop 0.1.8 — користувач підтвердив встановлення через менеджер.
 - BlockDrop 1.0.69, versionCode 662 — завантажено з F-Droid; SHA-256, криптографічний підпис для Android 9, minSdk 24 та ARM64 перевірено.
 - Шахи 10.6.0, versionCode 298, packageName jwtc.android.chess — завантажено з F-Droid; SHA-256, підпис для Android 9, minSdk 24 та ARM64 перевірено.
@@ -24,8 +25,6 @@
 
 ## Файли точних версій ще не отримано
 
-- Google Docs 1.19.372.08.40 — знайдена сторінка потрібного ARM64 APK; завантаження не підтверджено.
-  https://www.apkmirror.com/apk/google-inc/docs/docs-1-19-372-08-release/google-docs-1-19-372-08-40-android-apk-download/
 - Google Meet 2024.06.02.643059695.Release — знайдена потрібна версія; доступний на альтернативному джерелі файл 2024.06.02.639595590.Release не підставлявся замість неї.
   https://www.apkmirror.com/apk/google-inc/hangouts-meet/
 - Viber 22.4.3.0 — знайдена потрібна ARM64 версія; альтернативне джерело не відповіло в межах таймауту.
