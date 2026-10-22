@@ -43,3 +43,5 @@ The catalog includes 11 entries: School App Manager 0.2.3, Windows Learning Desk
 Only single APK files are supported, not XAPK/APKM or split APK sets. No silent installation, automatic uninstall or downgrade. Downloads are tied to the open activity; process termination cancels the operation and requires retrying.
 
 `QUERY_ALL_PACKAGES` supports inventory from a dynamic catalog on Android 11+; this is a dedicated school manager distributed directly, not a Play Store submission.
+
+Version 0.2.4 (7) adds an orange graduation-cap vector launcher icon with adaptive Android icon layers. Editable SVG: artwork/school-app-manager.svg. APK: app/apk/School-App-Manager-0.2.4-debug.apk. Build and API 28 signature verification passed; signer matches 0.2.3.
