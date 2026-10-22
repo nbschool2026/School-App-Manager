@@ -24,7 +24,7 @@ Kotlin, Android 9+ (API 28), ARM64, direct distribution to school tablets.
 5. Download; wait for the SHA-256/signature checks; tap Install.
 6. If needed, allow installations from School App Manager in Android Settings, return and tap Install again.
 7. Confirm in the system installer. A self-update can close the manager; reopen it.
-8. Rescan: expect 11 catalog apps; the manager is current and its header is version 0.2.3. Other missing/older apps can still require installation.
+8. Rescan: expect 12 catalog apps; the manager is current and its header is version 0.2.3. Other missing/older apps can still require installation.
 
 Device installation and network behavior still require this manual test. Desktop tests cover version comparison, a real APK's SHA-256/signature, wrong hashes, wrong signer and tampered APK rejection.
 
@@ -38,7 +38,7 @@ Use the same debug keystore as earlier builds for test updates. Never commit key
 
 Root: `schemaVersion: 1`, `apps: [...]`. Each entry requires `name`, `packageName`, numeric positive `versionCode`, `versionName`, direct HTTPS `apkUrl`, lowercase 64-character `sha256` and `signerSha256` (SHA-256 of DER signing certificate). Catalog updates must be reviewed by its owner; do not substitute guessed APK metadata.
 
-The catalog includes 11 entries: School App Manager 0.2.3, Windows Learning Desktop, Google Docs, Sheets, Slides, Meet, Viber, YouTube, Chrome, BlockDrop and Chess. The six third-party APKs are published in the school-apks GitHub Release with hashes verified against the uploaded assets. The user confirmed Windows Learning Desktop installation through the manager. The recovered complete school app list is in `catalog/APP-LIST.md`; per-app import progress and remaining blockers are in `catalog/IMPORT-STATUS.md`. Apps whose APKs or permanent download URLs are not verified are not included in the live catalog.
+The catalog includes 12 entries: School App Manager 0.2.4, Windows Learning Desktop, Google Docs, Sheets, Slides, Meet, Viber, YouTube, Chrome, BlockDrop, Chess and F-Droid. The six third-party APKs are published in the school-apks GitHub Release with hashes verified against the uploaded assets. The user confirmed Windows Learning Desktop installation through the manager. The recovered complete school app list is in `catalog/APP-LIST.md`; per-app import progress and remaining blockers are in `catalog/IMPORT-STATUS.md`. Apps whose APKs or permanent download URLs are not verified are not included in the live catalog.
 
 Only single APK files are supported, not XAPK/APKM or split APK sets. No silent installation, automatic uninstall or downgrade. Downloads are tied to the open activity; process termination cancels the operation and requires retrying.
 

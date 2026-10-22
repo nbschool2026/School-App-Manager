@@ -99,6 +99,15 @@
       "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/Chrome-138.0.7204.158.apk",
       "sha256": "04c11b30c410172c2cbfd9a3b736c6d67a1ec3b307ea36fd7009400316bb194e",
       "signerSha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+    },
+    {
+      "name": "F-Droid",
+      "packageName": "org.fdroid.fdroid",
+      "versionCode": 2000052,
+      "versionName": "2.0.2",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/F-Droid-2.0.2.apk",
+      "sha256": "19d51fad482239f6df6a99120e34513667e9a86d136dafdc4a211a68c3327b52",
+      "signerSha256": "43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab"
     }
   ]
 }
