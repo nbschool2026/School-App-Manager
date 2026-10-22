@@ -90,6 +90,15 @@
       "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/YouTube-21.23.485.apk",
       "sha256": "aeb19a76bdccf72f6027efaf4b4eee3cc10286bf4ac42b699eaa6bb99d6d0078",
       "signerSha256": "3d7a1223019aa39d9ea0e3436ab7c0896bfb4fb679f4de5fe7c23f326c8f994a"
+    },
+    {
+      "name": "Google Chrome",
+      "packageName": "com.android.chrome",
+      "versionCode": 720415821,
+      "versionName": "138.0.7204.158",
+      "apkUrl": "https://github.com/nbschool2026/School-App-Manager/releases/download/school-apks/Chrome-138.0.7204.158.apk",
+      "sha256": "04c11b30c410172c2cbfd9a3b736c6d67a1ec3b307ea36fd7009400316bb194e",
+      "signerSha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
     }
   ]
 }
