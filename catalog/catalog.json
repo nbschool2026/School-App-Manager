@@ -126,6 +126,15 @@
       "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Google-Drive-2.19.212.04.30.apk",
       "sha256": "3509e3eebc5b2439e67f04bab8ba9a8eaf789a28748d23f12fd687a45081028c",
       "signerSha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+    },
+    {
+      "name": "Google Classroom",
+      "packageName": "com.google.android.apps.classroom",
+      "versionCode": 300023934,
+      "versionName": "3.17.637104864",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Google-Classroom-3.17.637104864.apk",
+      "sha256": "b26b9a8f1005e53fde396d420b052eaad653e9f0bd9668780596d34e97e67cad",
+      "signerSha256": "2c8989ddaad2d08353e931aee01d1a892d9061f3234f44e00d0a848fee0cbd7c"
     }
   ]
 }
