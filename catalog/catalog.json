@@ -108,6 +108,24 @@
       "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/F-Droid-2.0.2.apk",
       "sha256": "19d51fad482239f6df6a99120e34513667e9a86d136dafdc4a211a68c3327b52",
       "signerSha256": "43238d512c1e5eb2d6569f4a3afbf5523418b82e0a3ed1552770abb9a9c9ccab"
+    },
+    {
+      "name": "Gmail",
+      "packageName": "com.google.android.gm",
+      "versionCode": 61551953,
+      "versionName": "2019.06.09.254811277.release",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Gmail-2019.06.09.254811277.release.apk",
+      "sha256": "34493074ee07b36f48127ab1e8e0c041a02149d8b23dd4da6ad9fb921ca50212",
+      "signerSha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
+    },
+    {
+      "name": "Google Диск",
+      "packageName": "com.google.android.apps.docs",
+      "versionCode": 192120430,
+      "versionName": "2.19.212.04.30",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Google-Drive-2.19.212.04.30.apk",
+      "sha256": "3509e3eebc5b2439e67f04bab8ba9a8eaf789a28748d23f12fd687a45081028c",
+      "signerSha256": "f0fd6c5b410f25cb25c3b53346c8972fae30f8ee7411df910480ad6b2d60db83"
     }
   ]
 }
