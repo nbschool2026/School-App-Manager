@@ -153,6 +153,15 @@
       "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Microsoft-Word-16.0.15427.20090.apk",
       "sha256": "7093f777a6a7ba3ebfdf4b2b4ad53ec22d1242f0146ad83a3d3b45c453ecde87",
       "signerSha256": "b925136f3ea7c0a1951690a1ab313910da81f40994a85342ec622888f1287051"
+    },
+    {
+      "name": "Scratch",
+      "packageName": "org.scratch",
+      "versionCode": 1702594826,
+      "versionName": "3.0.66-minSdk26",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Scratch-3.0.66.apk",
+      "sha256": "c68803f42a9f7c335f33a6c0083036639231b80554d11e958b14112756d9c63f",
+      "signerSha256": "cebdb743955713f70d9738e2aa32ae048494d32847f7ec221dda665a12941685"
     }
   ]
 }
