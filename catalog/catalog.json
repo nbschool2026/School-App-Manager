@@ -144,6 +144,15 @@
       "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/HiSqool-1.0.0.apk",
       "sha256": "c59e97ce19f1c526a59366c56bb86341711a0a161879105fcf24f737f968cc91",
       "signerSha256": "55b1eaadb1292929fbacbc3760d0ef43e23f34886558164317e6c2d15ea203c5"
+    },
+    {
+      "name": "Microsoft Word",
+      "packageName": "com.microsoft.office.word",
+      "versionCode": 2003039667,
+      "versionName": "16.0.15427.20090",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Microsoft-Word-16.0.15427.20090.apk",
+      "sha256": "7093f777a6a7ba3ebfdf4b2b4ad53ec22d1242f0146ad83a3d3b45c453ecde87",
+      "signerSha256": "b925136f3ea7c0a1951690a1ab313910da81f40994a85342ec622888f1287051"
     }
   ]
 }
