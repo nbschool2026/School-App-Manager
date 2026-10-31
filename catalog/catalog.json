@@ -135,6 +135,15 @@
       "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/Google-Classroom-3.17.637104864.apk",
       "sha256": "b26b9a8f1005e53fde396d420b052eaad653e9f0bd9668780596d34e97e67cad",
       "signerSha256": "2c8989ddaad2d08353e931aee01d1a892d9061f3234f44e00d0a848fee0cbd7c"
+    },
+    {
+      "name": "HiSqool",
+      "packageName": "com.unowhy.sqool.hisqool",
+      "versionCode": 19083069,
+      "versionName": "v.1.0.0",
+      "apkUrl": "https://raw.githubusercontent.com/nbschool2026/School-App-Manager/refs/heads/main/app/apk/HiSqool-1.0.0.apk",
+      "sha256": "c59e97ce19f1c526a59366c56bb86341711a0a161879105fcf24f737f968cc91",
+      "signerSha256": "55b1eaadb1292929fbacbc3760d0ef43e23f34886558164317e6c2d15ea203c5"
     }
   ]
 }
