@@ -42,3 +42,5 @@ ABI: arm64-v8a, armeabi-v7a, x86, x86_64.
 SHA-256 APK: `db892fe83de32d25f145ffcacc533d363834ecfb6ff1914171d12ca2b7533fd0`.
 SHA-256 сертифіката: `e73c46bacc29538c465f2c5b96926d6fc4545db0dfa784e86ca1552c2303b832`.
 Підпис перевірено apksigner для API 28. Це debug APK; фактичний запуск цієї збірки на планшеті ще потребує перевірки користувачем. Збережено запис у catalog.json з незмінним URL на коміт.
+
+18.11.2026: актуальний запис Windows Learning Desktop — 0.1.10 (12), stage128.apk; підпис відрізняється від stage106. Деталі переходу в IMPORT-STATUS.md.

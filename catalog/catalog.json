@@ -13,11 +13,11 @@
     {
       "name": "Windows Learning Desktop",
       "packageName": "ua.school.windowsdesktop",
-      "versionCode": 10,
-      "versionName": "0.1.8",
-      "apkUrl": "https://raw.githubusercontent.com/kosachevlad/windows-learning-desktop-mvp/50e056498383ab1660254a26e3c9ad87be7e0d70/app/apk/stage106.apk",
-      "sha256": "db892fe83de32d25f145ffcacc533d363834ecfb6ff1914171d12ca2b7533fd0",
-      "signerSha256": "e73c46bacc29538c465f2c5b96926d6fc4545db0dfa784e86ca1552c2303b832"
+      "versionCode": 12,
+      "versionName": "0.1.10",
+      "apkUrl": "https://raw.githubusercontent.com/kosachevlad/windows-learning-desktop-mvp/c2ab011b050a66ac2650c160b7a51f90ebd5faa2/app/apk/stage128.apk",
+      "sha256": "1e00e89aa533d5957a4c2aac426b787777e295aed01d3ef326c052fd4dd82c98",
+      "signerSha256": "5540360e650ac46f4680fa69ae4d017d1b305fdfc983d8cbcdd9ac8f41aaef89"
     },
     {
       "name": "BlockDrop (Тетріс)",
