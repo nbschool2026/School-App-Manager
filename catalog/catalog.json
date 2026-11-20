@@ -13,10 +13,10 @@
     {
       "name": "Windows Learning Desktop",
       "packageName": "ua.school.windowsdesktop",
-      "versionCode": 12,
-      "versionName": "0.1.10",
-      "apkUrl": "https://raw.githubusercontent.com/kosachevlad/windows-learning-desktop-mvp/c2ab011b050a66ac2650c160b7a51f90ebd5faa2/app/apk/stage128.apk",
-      "sha256": "1e00e89aa533d5957a4c2aac426b787777e295aed01d3ef326c052fd4dd82c98",
+      "versionCode": 15,
+      "versionName": "0.1.13",
+      "apkUrl": "https://raw.githubusercontent.com/kosachevlad/windows-learning-desktop-mvp/2fc32cdda16b5fe28be9736b59681c118d45be7c/app/apk/stage134.apk",
+      "sha256": "e9ff31cc07fbbf7d90437c20a545937fe05a5f69a8aab28b058e7690d01f8248",
       "signerSha256": "5540360e650ac46f4680fa69ae4d017d1b305fdfc983d8cbcdd9ac8f41aaef89"
     },
     {
